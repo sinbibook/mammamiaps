@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.14.0",
-    "generatedAt": "2026-10-06T02:35:08.343072206Z",
+    "version": "1.15.0",
+    "generatedAt": "2026-10-06T02:35:53.563849778Z",
     "templateType": "full_banner_accordion",
     "propertyId": "7b4661f5-daf2-4ef7-9a24-5eb20c2f5246",
     "homepageId": "01a10ee1-6732-748b-9d9a-a8e6291299ed"
@@ -1818,6 +1818,21 @@
                   ],
                   "blockId": "bf465949-7328-4bba-af7d-636bc0694427",
                   "description": "여유로운 공간에서 즐기는 식사"
+                },
+                {
+                  "title": "With Pet",
+                  "images": [
+                    {
+                      "id": "01a10f11-40e4-70d2-9205-46e6475d7eeb",
+                      "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/main_about/1791254151101-0cy26kho6n.jpg",
+                      "sortOrder": 2,
+                      "description": "",
+                      "isSelected": true,
+                      "blockId": "9def3607-28f1-4d26-b1be-e1d0dace5d1f"
+                    }
+                  ],
+                  "blockId": "9def3607-28f1-4d26-b1be-e1d0dace5d1f",
+                  "description": "소중한 반려견과 함께하는 특별한 여행"
                 }
               ]
             }
