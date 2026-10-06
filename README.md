@@ -1,1 +1,1 @@
-# mammamiaps
+# template-full-banner-accordion Template
