@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.13.0",
-    "generatedAt": "2026-10-06T02:32:46.001584569Z",
+    "version": "1.14.0",
+    "generatedAt": "2026-10-06T02:35:08.343072206Z",
     "templateType": "full_banner_accordion",
     "propertyId": "7b4661f5-daf2-4ef7-9a24-5eb20c2f5246",
     "homepageId": "01a10ee1-6732-748b-9d9a-a8e6291299ed"
@@ -1695,7 +1695,7 @@
           "sections": [
             {
               "hero": {
-                "title": "",
+                "title": " ",
                 "images": [
                   {
                     "id": "01a10f0e-64bf-7a10-8d79-7096997b093f",
@@ -1788,7 +1788,38 @@
                 ],
                 "description": "나무가 어우러진 풍경 속에서 잠시 걸음을 늦춰보세요.\n함께 앉아 이야기를 나누고, 저마다의 방식으로 쉬어가는 곳.\n태안 맘마미아에서 편안한 하루를 만나보세요."
               },
-              "about": [ ]
+              "about": [
+                {
+                  "title": "Swimming Pool",
+                  "images": [
+                    {
+                      "id": "01a10f10-90e3-789d-8ecd-be378cc27a25",
+                      "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/main_about/1791254105984-78gk3xf2oi.jpg",
+                      "sortOrder": 0,
+                      "description": "",
+                      "isSelected": true,
+                      "blockId": "f5cfdcb8-5e06-4885-a422-052c9c6db6af"
+                    }
+                  ],
+                  "blockId": "f5cfdcb8-5e06-4885-a422-052c9c6db6af",
+                  "description": "햇살 아래에서 여유롭게 흐르는 시간"
+                },
+                {
+                  "title": "Private BBQ",
+                  "images": [
+                    {
+                      "id": "01a10f10-90d0-74e6-aa36-d4659db49b66",
+                      "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/main_about/1791254105985-7lk2llyysz.jpg",
+                      "sortOrder": 1,
+                      "description": "",
+                      "isSelected": true,
+                      "blockId": "bf465949-7328-4bba-af7d-636bc0694427"
+                    }
+                  ],
+                  "blockId": "bf465949-7328-4bba-af7d-636bc0694427",
+                  "description": "여유로운 공간에서 즐기는 식사"
+                }
+              ]
             }
           ]
         },
