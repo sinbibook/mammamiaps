@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.8.0",
-    "generatedAt": "2026-10-06T02:22:31.772642908Z",
+    "version": "1.9.0",
+    "generatedAt": "2026-10-06T02:23:42.643995868Z",
     "templateType": "full_banner_accordion",
     "propertyId": "7b4661f5-daf2-4ef7-9a24-5eb20c2f5246",
     "homepageId": "01a10ee1-6732-748b-9d9a-a8e6291299ed"
@@ -1581,8 +1581,8 @@
                 "title": "A Gentle Pause",
                 "images": [
                   {
-                    "id": "01a10ef3-5f16-7cb3-80cc-bdb016021895",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_essence/1791252191611-k2wseplqbr.jpg",
+                    "id": "01a10f06-1a49-75be-8f21-208f32f5f493",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_essence/1791253420216-yavgqtfrd3.jpg",
                     "sortOrder": 0,
                     "description": "",
                     "isSelected": true,
