@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태안 맘마미아 애견동반 펜션</title>
+    <link rel="stylesheet" href="styles/header.css">
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="태안 맘마미아 애견동반 펜션" />
+  <meta property="og:description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요." />
+  
+  <meta property="og:url" content="https://mammamiaps.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="태안 맘마미아 애견동반 펜션" />
+  <meta name="twitter:description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요." />
+  
+</head>
+<body>
+    <!-- Transparent Header -->
+    <header class="transparent-header">
+        <div class="header-container">
+            <!-- Left: Logo -->
+            <div class="header-logo" onclick="navigateTo('home')">
+                <img class="logo-img" data-logo src="" alt="" />
+            </div>
+
+            <!-- Center: Empty space -->
+            <div></div>
+
+            <!-- Right: YBS Button, Reservation Button and Menu Button -->
+            <div class="header-right">
+                <!-- Reservation Button -->
+                <button class="header-booking-btn" data-property-realtime-booking-id aria-label="예약하기">
+                    <span>예약</span>
+                </button>
+
+                <!-- YBS Button -->
+                <button class="header-ybs-btn" data-ybs-booking aria-label="YBS 예약">
+                    <span>YBS</span>
+                </button>
+
+                <!-- Menu Button -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="메뉴">
+                    <span class="menu-text">MENU</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-overlay-content">
+
+            <!-- Split Layout Container -->
+            <div class="menu-split-container">
+                <!-- Left: Menu Items in 2x2 Grid -->
+                <div class="menu-left-section">
+                    <div class="menu-grid-2x2">
+                        <!-- Prologue Section -->
+                        <div class="menu-item" data-menu-type="prologue">
+                            <h3 class="menu-item-title">프롤로그</h3>
+                            <ul class="menu-item-list">
+                                <li><a onclick="navigateTo('main')">프롤로그</a></li>
+                                <li><a onclick="navigateTo('directions')">오시는길</a></li>
+                                <li class="nearby-attractions-menu" style="display: none;"><a onclick="navigateTo('nearby-attractions')">주변 관광지</a></li>
+                                <li class="layout-map-menu" style="display: none;"><a onclick="navigateTo('layout-map')">숙소 배치도</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Rooms Section -->
+                        <div class="menu-item" data-menu-type="rooms">
+                            <h3 class="menu-item-title">공간소개</h3>
+                            <ul class="menu-item-list" data-rooms-list>
+                                <li><a onclick="navigateTo('room')">객실명</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Facilities Section -->
+                        <div class="menu-item" data-menu-type="facilities">
+                            <h3 class="menu-item-title">시설소개</h3>
+                            <ul class="menu-item-list" data-facilities-list>
+                                <li><a onclick="navigateTo('facility')">시설명</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Reservation Section -->
+                        <div class="menu-item" data-menu-type="reservation">
+                            <h3 class="menu-item-title">예약안내</h3>
+                            <ul class="menu-item-list">
+                                <li><a onclick="navigateTo('reservation')">예약안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Dynamic Image : property.images[0].exterior[] 매핑 -->
+                <div class="menu-right-section">
+                    <div class="menu-image-container">
+                        <img id="menu-dynamic-image" src="" alt="" data-menu-banner-img />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Overlay Background -->
+    <div class="menu-overlay-bg" id="menu-overlay-bg"></div>
+
+    <!-- Mobile Fixed Buttons Container (위치: TOP 버튼 위) -->
+    <div class="mobile-fixed-buttons">
+        <!-- Mobile YBS Button (TOP 위) -->
+        <button class="mobile-fixed-ybs-btn" data-ybs-booking aria-label="YBS 예약">
+            YBS
+        </button>
+    </div>
+
+    <!-- Preview Handler for Admin Integration -->
+    <script src="js/preview-handler.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Header script -->
+    <script src="js/common/header.js"></script>
+</body>
+</html>

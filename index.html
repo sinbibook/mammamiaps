@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>태안 맘마미아 애견동반 펜션 - 홈</title>
+    <meta name="description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요.">
+    <meta name="keywords" content="">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/common.css" as="style">
+    <link rel="preload" href="styles/index.css" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/popup.css">
+
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="태안 맘마미아 애견동반 펜션 - 홈" />
+  <meta property="og:description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요." />
+  
+  <meta property="og:url" content="https://mammamiaps.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="태안 맘마미아 애견동반 펜션 - 홈" />
+  <meta name="twitter:description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요." />
+  
+</head>
+<body>
+    <!-- 풀페이지 네비게이션 -->
+    <nav class="fp-nav">
+        <ul>
+            <li><a href="#hero" class="active"><span></span></a></li>
+            <li><a href="#essence"><span></span></a></li>
+            <li><a href="#signature"><span></span></a></li>
+            <li><a href="#gallery"><span></span></a></li>
+            <li><a href="#closing"><span></span></a></li>
+        </ul>
+    </nav>
+
+    <div id="fullpage">
+        <!-- CUSTOM FIELD : 메인 소개 섹션 -->
+        <section class="section fp-section hero-section">
+            <div class="hero-slider" data-hero-slider>
+                <!-- 메인 소개섹션 사용자가 업로드한 이미지 갯수만큼 동적 매핑 -->
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <!-- 메인 소개섹션 타이틀 매핑 -->
+                  <div class="hero-property-name" data-hero-property-name-en></div>
+                <h2 class="hero-title fade-in-up" data-hero-title style="animation-delay: 0.2s;"></h2>
+                <!-- 메인 소개섹션 설명 매핑 -->
+                <p class="hero-description fade-in-up" data-hero-description style="animation-delay: 1.2s;"></p>
+            </div>
+            <div class="hero-bottom-info">
+                <div class="hero-progress-container">
+                    <span class="current-slide hero-indicators" data-current-slide></span>
+                    <div class="hero-progress-bar">
+                        <div class="hero-progress-fill" data-hero-progress></div>
+                    </div>
+                    <span class="total-slides hero-indicators" data-total-slides></span>
+                </div>
+                <!-- 오른쪽 빈 공간 (균형을 위해) -->
+                <div style="flex: 0 0 auto; width: 100px;"></div>
+            </div>
+        </section>
+
+        <!-- CUSTOM FIELD : 핵심 메시지 섹션 -->
+        <section class="section fp-section essence-section">
+            <div class="essence-container">
+                <div class="essence-left">
+                    <!-- 핵심 메시지 업로드된 이미지 1장 매핑 -->
+                    <img class="essence-image" data-essence-img src="" alt="">
+                </div>
+                <div class="essence-right">
+                    <div class="essence-content">
+                        <!-- 핵심 메시지 타이틀 매핑 -->
+                        <h4 class="essence-title animate-element" data-essence-title></h4>
+                        <div class="essence-divider animate-element"></div>
+                        <!-- 핵심 메시지 설명 매핑 -->
+                        <p class="essence-description animate-element" data-essence-description></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOM FIELD : 특색 섹션 -->
+        <section class="section fp-section signature-section">
+            <div class="signature-container">
+                <div class="signature-left">
+                    <div class="signature-content">
+                        <!-- 특색 섹션 타이틀 매핑 -->
+                        <h2 class="signature-title animate-element" data-signature-title></h2>
+                        <div class="essence-divider animate-element"></div>
+                        <!-- 특색 섹션 설명 매핑 -->
+                        <p class="signature-description animate-element" data-signature-description></p>
+                        <!-- 이미지 갤러리 영역 -->
+                        <div class="signature-right">
+                            <!-- 메인 이미지 -->
+                            <img class="signature-image" data-signature-main-img src="" alt="">
+                            <!-- 썸네일 갤러리 매핑 (최대 3장) -->
+                            <div class="signature-thumbnails animate-element">
+                                <div class="signature-thumb animate-element" data-thumb-index="0">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="signature-thumb animate-element" data-thumb-index="1">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="signature-thumb animate-element" data-thumb-index="2">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- CUSTOM FIELD :갤러리 섹션 -->
+        <section class="section fp-section gallery-section" data-anchor="gallery">
+            <div class="section-wrapper">
+                <div class="gallery-container">
+                    <div class="gallery-header">
+                        <!-- 갤러리 타이틀 매핑 -->
+                        <h2 class="gallery-title animate-element" data-gallery-title></h2>
+                        <!-- 갤러리 설명 매핑 -->
+                        <p class="gallery-description animate-element" data-gallery-description></p>
+                    </div>
+                    <div class="gallery-slider-wrapper">
+                        <div class="gallery-slider" data-gallery-slider>
+                            <!-- 갤러리 이미지 사용자가 업로드한 이미지 갯수만큼 동적 매핑 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOM FIELD : 마무리 섹션  -->
+        <section class="section fp-section closing-section" data-anchor="closing">
+            <div class="section-wrapper">
+                <!-- 마무리 섹션 이미지 -->
+                <div class="closing-background">
+                    <img data-closing-bg-img src="" alt="">
+                </div>
+
+                <!-- 중앙 콘텐츠 그룹 -->
+                <div class="closing-center-content">
+                    <!-- property.nameEn 매핑 -->
+                    <div class="closing-property-name animate-element" data-closing-property-name></div>
+                    <!-- 타이틀 -->
+                    <div class="closing-title animate-element" data-closing-title></div>
+                    <!-- 설명 -->
+                    <div class="closing-description animate-element" data-closing-description></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Popup System -->
+    <div id="popup-container"></div>
+
+    <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
+    <!-- <script src="js/image-with-fallback.js"></script> -->
+
+    <!-- Image Helpers (standard-template-data.json에서만 필요) -->
+    <script src="js/image-helpers.js"></script>
+
+    <!-- Base Data Mapper (must load before preview-handler) -->
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+
+    <!-- Preview Handler for Admin Integration -->
+    <script src="js/preview-handler.js"></script>
+
+    <!-- Index Page Mapper -->
+    <script src="js/data-mapper/pages/index-mapper.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Page-specific script -->
+    <script src="js/pages/index.js"></script>
+    <script src="js/popup.js"></script>
+
+</body>
+</html>

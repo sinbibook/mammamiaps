@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>태안 맘마미아 애견동반 펜션 - 객실안내</title>
+    <meta name="description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요.">
+    <meta name="keywords" content="">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/common.css" as="style">
+    <link rel="preload" href="styles/room.css" as="style">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/room.css">
+
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="태안 맘마미아 애견동반 펜션 - 객실안내" />
+  <meta property="og:description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요." />
+  
+  <meta property="og:url" content="https://mammamiaps.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="태안 맘마미아 애견동반 펜션 - 객실안내" />
+  <meta name="twitter:description" content="만리포해수욕장 인근 태안 애견동반 펜션입니다. 넓은 객실, 수영장, 바베큐 시설 보유하고 있어 가족, 단체로 즐거운 추억 쌓아보세요." />
+  
+</head>
+<body>
+    <main class="main-content">
+        <!-- rooms[index].images[0].interior 매핑 -->
+        <section class="hero-section hero-center-bottom">
+            <div class="hero-slider" data-hero-slider>
+                <!-- 동적으로 hero-slide가 생성됩니다 -->
+            </div>
+            <!-- 페이지명 하드코딩 -->
+            <div class="hero-property-title">ROOM</div>
+            <div class="hero-bottom-info">
+                <div class="hero-progress-container">
+                    <button class="hero-nav-prev" aria-label="Previous slide">&lt;</button>
+                    <span class="current-slide hero-indicators" data-current-slide>01</span>
+                    <div class="hero-progress-bar">
+                        <div class="hero-progress-fill" data-hero-progress></div>
+                    </div>
+                    <span class="total-slides hero-indicators" data-total-slides>03</span>
+                    <button class="hero-nav-next" aria-label="Next slide">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="room-info-section room-about-section">
+            <div class="room-intro-section">
+                <div class="room-intro-content">
+                    <!-- rooms[index].images[0].thumbnail 매핑 -->
+                    <div class="room-thumbnail animate-element">
+                        <div class="room-thumbnail-house">
+                            <img data-room-thumbnail alt="Room Thumbnail">
+                        </div>
+                    </div>
+                    <!-- rooms[index].name 매핑 -->
+                    <div class="room-label">
+                        <span class="room-number animate-element" data-room-name></span>
+                    </div>
+                    <!-- homepage.customFields.pages.room[index].sections[0].hero.title 매핑 -->
+                    <p class="room-description animate-element" data-room-description></p>
+                </div>
+            </div>
+
+            <!-- 이미지 슬라이더와 썸네일 - 중앙 정렬 -->
+            <div class="room-media-container animate-element">
+                <div class="room-media-center">
+                    <!-- rooms[index].images[0].interior (index 2~5) 매핑 -->
+                    <div class="room-slider" data-room-slider>
+                        <div class="room-slider-wrapper" data-room-slider-wrapper>
+                            <!-- 동적으로 room-slide가 생성됩니다 -->
+                        </div>
+                        <div class="room-slider-indicators" data-room-slider-indicators>
+                            <!-- 동적으로 indicator가 생성됩니다 -->
+                        </div>
+                    </div>
+                    <div class="room-thumbnails" data-room-thumbnails>
+                        <!-- 동적으로 thumb-img가 생성됩니다 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room Details 섹션 - 이미지 아래로 이동, Amenities와 동일한 스타일 -->
+            <div class="room-details-section animate-element">
+                <h3 class="room-section-title">Room Details</h3>
+                <!-- rooms[index] 시스템 데이터 매핑 -->
+                <div class="room-details-grid" data-room-details>
+                        <div class="room-detail-item">
+                            <span class="detail-label">객실 크기</span>
+                            <span class="detail-value" data-room-size></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">침대 타입</span>
+                            <span class="detail-value" data-room-bed-types></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">객실 구성</span>
+                            <span class="detail-value" data-room-composition></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">인원</span>
+                            <span class="detail-value" data-room-capacity></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">체크인</span>
+                            <span class="detail-value" data-room-checkin></span>
+                        </div>
+                        <div class="room-detail-item">
+                            <span class="detail-label">체크아웃</span>
+                            <span class="detail-value" data-room-checkout></span>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- rooms[index].amenities 매핑 -->
+            <div class="room-amenities-section animate-element" data-room-amenities>
+                <h3 class="room-section-title">Amenities</h3>
+                <div class="amenities-grid" data-room-amenities-grid>
+                    <!-- 동적으로 amenity-item이 생성됩니다 -->
+                </div>
+            </div>
+
+            <!-- rooms[index].roomInfo 매핑 -->
+            <div class="room-usage-guide-section animate-element" data-room-usage-guide>
+                <h3 class="room-section-title">Room Information</h3>
+                <div class="usage-guide-content" data-room-guide>
+                    <!-- 동적으로 내용이 매핑됩니다 -->
+                </div>
+            </div>
+
+        </section>
+
+        <section class="room-gallery-section">
+            <div class="room-gallery-label animate-element">
+                <span>Room Gallery</span>
+            </div>
+            <!-- rooms[index].images[0].exterior 매핑 -->
+            <div class="room-gallery-container" data-room-gallery>
+                <!-- 동적으로 gallery-item이 생성됩니다 -->
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
+    <!-- <script src="js/image-with-fallback.js"></script> -->
+
+    <!-- Image Helpers -->
+    <script src="js/image-helpers.js"></script>
+
+    <!-- Base Data Mapper -->
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+
+    <!-- Room Page Mapper -->
+    <script src="js/data-mapper/pages/room-mapper.js"></script>
+
+    <!-- Preview Handler for Admin Integration -->
+    <script src="js/preview-handler.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Page-specific script -->
+    <script src="js/pages/room.js"></script>
+
+    <!-- Scroll Animations -->
+    <script src="js/scroll-animations.js"></script>
+
+</body>
+</html>

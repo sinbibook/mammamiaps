@@ -1,0 +1,198 @@
+/* ================================
+   Directions Page Styles
+   ================================ */
+
+/* Location Section */
+.location-section {
+    padding: 80px 20px 150px 20px;
+    background: var(--color-primary);
+    text-align: center;
+    position: relative;
+}
+
+
+.location-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.about-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 숙소명 span 스타일 - 동일한 스타일 유지 */
+.about-title span[data-property-name] {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.location-details {
+    margin: 70px 0 30px;
+}
+
+.location-address-wrapper {
+    padding: 30px;
+    background-color: rgba(49, 66, 61, 0.1);
+    border-radius: 8px;
+}
+
+.location-address-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.location-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(49, 66, 61, 0.2);
+    margin: 20px 0;
+}
+
+.location-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-secondary);
+}
+
+.location-address {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+.location-note {
+    margin: 0;
+    padding: 0;
+}
+
+.location-note p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.location-note p:first-child {
+    margin-top: 0;
+}
+
+.location-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* Map Section */
+.map-wrapper {
+    margin-top: 60px;
+    padding: 40px 0;
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#kakao-map {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+}
+
+/* Animation Classes */
+.location-details,
+.location-note,
+.map-wrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.location-details.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.location-note.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.map-wrapper.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .location-section {
+        padding: 60px 20px;
+    }
+
+    .location-section::before {
+        width: 100%;
+        height: 28%;
+    }
+
+    .about-title {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+
+    .location-address-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .location-address {
+        font-size: 1rem;
+    }
+
+    .location-note {
+        padding: 20px;
+    }
+
+    .location-note p {
+        font-size: 0.9rem;
+    }
+
+    .map-wrapper {
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1800px) {
+    .location-content {
+        max-width: 1600px;
+    }
+}

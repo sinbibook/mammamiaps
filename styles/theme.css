@@ -1,0 +1,12 @@
+/* CDN Fonts */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* CSS Variables */
+:root {
+  --font-ko-main: 'Pretendard', sans-serif;
+  --font-ko-sub: 'Pretendard', sans-serif;
+  --font-en-main: 'Cormorant', sans-serif;
+  --color-primary: #f5f5f5;
+  --color-secondary: #1D3A5F;
+}

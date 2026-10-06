@@ -1,0 +1,562 @@
+/* ================================
+   Facility Page Styles
+   ================================ */
+
+/* Hero section height override for facility page - desktop default */
+.hero-section {
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Hero slider positioning - contains all hero elements */
+.hero-slider {
+    position: relative;
+    height: 100vh;
+}
+
+/* Desktop styles - Use default common.css styles */
+/* Remove desktop overrides that break the layout */
+
+/* Hero slide images height adjustment */
+.hero-slide {
+    height: 100vh !important;
+}
+
+.hero-slide img {
+    height: 100vh !important;
+    object-fit: cover;
+}
+
+/* Mobile specific - contain zoom within hero area */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 65vh !important;
+        min-height: 65vh !important;
+        overflow: hidden !important;
+        position: relative;
+    }
+
+    .hero-slider {
+        overflow: hidden !important;
+        height: 65vh !important;
+        position: relative;
+    }
+
+    .hero-slide {
+        overflow: hidden !important;
+        height: 65vh !important;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .hero-slide img {
+        height: 65vh !important;
+    }
+
+    /* Ensure zoom animation stays within bounds */
+    .hero-slide img {
+        transform-origin: center center;
+        will-change: transform;
+    }
+
+    /* Mobile hero-property-title positioning */
+    .hero-property-title {
+        position: absolute !important;
+        bottom: 40% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* Mobile hero-progress-container positioning */
+    .hero-progress-container {
+        left: 50% !important;
+        right: auto !important;
+        /* transform: translateX(-50%) !important; */
+        width: 200px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Ensure progress bar is visible on mobile */
+    .hero-progress-bar {
+        display: block !important;
+        width: 100px !important;
+        height: 2px !important;
+        background: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    .hero-progress-fill {
+        display: block !important;
+        height: 2px !important;
+        background: #fff !important;
+    }
+}
+
+
+/* Page name position adjustment */
+.page-name {
+    top: 30px;
+}
+
+/* Facility Main Section */
+.facility-main-section {
+    padding: 80px 20px 15px;
+    background: var(--color-primary);
+    text-align: center;
+    position: relative;
+}
+
+
+
+.facility-main-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facility-main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    margin-top: 110px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.facility-main-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.facility-main-description {
+    font-family: var(--font-ko-sub);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+}
+
+.facility-main-description.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Small Hexagon Thumbnail */
+.facility-thumbnail {
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    position: relative;
+}
+
+.facility-thumbnail.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 썸네일 아래 세로 라인 */
+.facility-thumbnail::after {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 70px;
+    background: var(--color-secondary);
+}
+
+/* 세로선 끝에 바로 이어지는 가로선 - width 100%, 1px 두께 */
+.facility-thumbnail::before {
+    content: '';
+    position: absolute;
+    bottom: -70px; /* 세로선 끝지점과 동일한 위치 */
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-secondary);
+    z-index: 1;
+}
+
+.facility-thumbnail-house {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+/* Green border for house thumbnail */
+.facility-thumbnail-house::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+    z-index: 1;
+}
+
+/* White padding for house thumbnail */
+.facility-thumbnail-house::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+    z-index: 2;
+}
+
+.facility-thumbnail-house img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    object-fit: cover;
+    object-position: center;
+    clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+    z-index: 3;
+}
+
+
+.facility-full-image {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 60px auto 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.4s;
+}
+
+.facility-full-image.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.facility-full-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Facility Details Wrapper */
+.facility-details-wrapper {
+    padding: 0 0 30px 0;
+    background: var(--color-primary);
+}
+
+.facility-details-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facility-details-content .facility-details-section {
+    margin-top: 30px;
+    padding: 30px;
+    background: rgba(49, 66, 61, 0.05);
+    border-radius: 8px;
+}
+
+/* Facility Details Section */
+.facility-details-section {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+}
+
+.facility-details-section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.facility-detail-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    letter-spacing: 0.02em;
+}
+
+.facility-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.facility-detail-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+}
+
+.facility-detail-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Additional Info Section */
+.facility-additional-wrapper {
+    padding: 0 20px 100px 20px;
+    background: var(--color-primary);
+}
+
+.facility-additional-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facility-additional-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.facility-additional-section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.facility-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 0.02em;
+}
+
+.facility-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.facility-info-card {
+    background: rgba(49, 66, 61, 0.05);
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.facility-info-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.facility-info-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.facility-info-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.facility-info-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.facility-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 25px;
+    letter-spacing: 0.02em;
+}
+
+.facility-card-content {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.facility-card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facility-card-content ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.facility-card-content ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.facility-card-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Gallery styles moved to common.css */
+.marquee-section {
+    padding-top: 140px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .facility-main-section {
+        padding: 60px 20px 0 20px;
+    }
+
+    .facility-main-section::before {
+        width: 90%;
+    }
+
+
+    .facility-main-title {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+
+    .facility-main-description {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .facility-thumbnail-house {
+        width: 150px;
+        height: 135px;
+    }
+
+    .facility-full-image {
+        height: 350px;
+        margin: 40px 20px 0 20px;
+        max-width: calc(100% - 40px);
+    }
+
+    .facility-details-wrapper {
+        padding: 10px 20px 30px 20px;
+    }
+
+    .facility-detail-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .facility-detail-content p {
+        font-size: 0.95rem;
+    }
+
+    .facility-additional-wrapper {
+        padding: 60px 20px;
+    }
+
+    .facility-section-title {
+        font-size: 1.7rem;
+        margin-bottom: 40px;
+    }
+
+    .facility-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .facility-info-card {
+        padding: 30px 20px;
+    }
+
+    .facility-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .facility-card-content {
+        font-size: 0.95rem;
+    }
+
+    /* .facility-gallery-section {
+        min-height: 800px;
+        padding-top: 150px;
+    }
+
+    .facility-gallery-label {
+        top: 40px;
+        left: 20px;
+    }
+
+    .facility-gallery-label span {
+        font-size: 2.5rem;
+    } */
+
+    /* .facility-gallery-container {
+        max-width: 100%;
+        position: relative;
+        bottom: auto;
+        transform: none;
+        left: auto;
+        padding: 0 20px 20px;
+    }
+
+    .facility-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .facility-gallery-container .gallery-item {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+    } */
+
+    .gallery-item img {
+        height: 100%;
+    }
+
+    .facility-gallery-container .gallery-item,
+    .facility-gallery-section .facility-gallery-container .gallery-item {
+        height: 30vh !important;
+        min-height: 30vh !important;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1800px) {
+    .facility-main-content {
+        max-width: 1600px;
+    }
+}

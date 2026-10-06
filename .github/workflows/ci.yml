@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check JavaScript syntax
+      run: |
+        # JS 파일이 있으면 구문 검사
+        if find . -name "*.js" -type f | grep -q .; then
+          echo "Checking JavaScript files..."
+          find . -name "*.js" -type f -exec node -c {} \;
+          echo "✓ JavaScript syntax OK"
+        else
+          echo "No JavaScript files found"
+        fi
+
+    - name: Validate HTML structure
+      run: |
+        # index.html 존재 확인
+        if [ -f "index.html" ]; then
+          echo "✓ index.html found"
+        else
+          echo "⚠️ No index.html found"
+          ls -la *.html 2>/dev/null || echo "No HTML files found"
+        fi
