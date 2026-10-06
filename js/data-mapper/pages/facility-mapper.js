@@ -183,12 +183,19 @@ class FacilityMapper extends BaseDataMapper {
             facilityTitle.textContent = facility.name || '시설명';
         }
 
-        // 시설 설명 매핑 (CUSTOM FIELD: hero.title)
+        // 시설 소개 문구 매핑 (template-A와 동일한 폴백 체인)
+        // CUSTOM FIELD hero.title (1순위) → facilities[current].usageGuide (이용안내)
+        // description 은 하단 '시설 상세 안내' 섹션에서 노출하므로 여기서는 제외 (중복 방지)
+        // 둘 다 비면 미노출
         const facilityDescription = this.safeSelect('[data-facility-description]');
         if (facilityDescription) {
             const facilityPageData = this.getCurrentFacilityPageData();
-            const heroTitle = facilityPageData?.sections?.[0]?.hero?.title;
-            facilityDescription.innerHTML = this._formatTextWithLineBreaks(heroTitle, '메인 소개 타이틀');
+            const heroTitle = this.sanitizeText(facilityPageData?.sections?.[0]?.hero?.title);
+            const usageGuide = this.sanitizeText(facility.usageGuide);
+            const text = heroTitle || usageGuide;
+
+            facilityDescription.innerHTML = text ? this._formatTextWithLineBreaks(text) : '';
+            facilityDescription.style.display = text ? '' : 'none';
         }
 
         // 시설 번호 매핑 제거됨 - 동적 생성 비활성화
@@ -209,11 +216,15 @@ class FacilityMapper extends BaseDataMapper {
         const heroDescription = facilityPageData?.sections?.[0]?.hero?.description;
         const description = heroDescription || facility.description;
 
-        if (description) {
-            descriptionContainer.innerHTML = this._formatTextWithLineBreaks(description);
-        } else {
-            descriptionContainer.innerHTML = `<p>${facility.name} 상세 설명이 준비 중입니다.</p>`;
+        // 시설설명 없으면 상세 안내 섹션 미노출
+        const detailsWrapper = descriptionContainer.closest('.facility-details-wrapper');
+        const hasDescription = !this._isEmptyValue(description) && description.trim() !== '';
+
+        if (detailsWrapper) {
+            detailsWrapper.style.display = hasDescription ? '' : 'none';
         }
+
+        descriptionContainer.innerHTML = hasDescription ? this._formatTextWithLineBreaks(description) : '';
     }
 
     /**

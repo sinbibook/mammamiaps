@@ -985,6 +985,13 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 }
 
 
+/* 모바일/터치 기기: background-attachment fixed 미지원(iOS) → 이미지 과확대 방지 */
+@media (max-width: 1024px), (hover: none) {
+    .full-banner {
+        background-attachment: scroll;
+    }
+}
+
 @media (max-width: 768px) {
     .full-banner {
         height: 500px;

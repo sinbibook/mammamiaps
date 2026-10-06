@@ -772,7 +772,7 @@ class PreviewHandler {
 
                 switch (section) {
                     case 'hero':
-                        mapper.mapSliderSection();
+                        mapper.mapHeroSection();
                         mapper.mapLocationInfo();
                         break;
                     default:
@@ -815,7 +815,7 @@ class PreviewHandler {
 
                 switch (section) {
                     case 'hero':
-                        mapper.mapHeroSlider();
+                        mapper.mapHeroSection();
                         break;
                     case 'about':
                         mapper.mapLayoutMapContent();

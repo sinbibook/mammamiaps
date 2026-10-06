@@ -225,6 +225,35 @@ class BaseDataMapper {
         return descriptions[code] || '';
     }
 
+    /**
+     * Hero 단일 이미지 매핑 (슬라이더 없이 첫번째 선택 이미지 1장만 노출)
+     * @param {Array} images - hero.images 배열
+     * @param {string} altFallback - description 없을 때 alt 텍스트
+     */
+    mapHeroImage(images, altFallback = '') {
+        const container = this.safeSelect('[data-hero-image]');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        const slide = document.createElement('div');
+        slide.className = 'hero-slide active';
+
+        const img = document.createElement('img');
+        const firstImage = ImageHelpers.getFirstSelectedImage(images);
+
+        if (firstImage) {
+            img.src = firstImage.url;
+            img.alt = this.sanitizeText(firstImage.description, altFallback);
+            img.loading = 'eager';
+        } else {
+            ImageHelpers.applyPlaceholder(img);
+        }
+
+        slide.appendChild(img);
+        container.appendChild(slide);
+    }
+
     // ============================================================================
     // 🎨 ANIMATION UTILITIES
     // ============================================================================
