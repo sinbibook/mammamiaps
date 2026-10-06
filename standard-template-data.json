@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.1.0",
-    "generatedAt": "2026-10-06T02:03:16.253113264Z",
+    "version": "1.2.0",
+    "generatedAt": "2026-10-06T02:05:09.382454216Z",
     "templateType": "full_banner_accordion",
     "propertyId": "7b4661f5-daf2-4ef7-9a24-5eb20c2f5246",
     "homepageId": "01a10ee1-6732-748b-9d9a-a8e6291299ed"
@@ -1577,11 +1577,36 @@
                 "description": "태안 맘마미아 애견동반 펜션만의 특별한 공간"
               },
               "signature": {
-                "title": "",
-                "images": [ ],
+                "title": "ROOM PREVIEW",
+                "images": [
+                  {
+                    "id": "01a10ef5-19e5-700a-9553-fb87d0c096a1",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_signature/1791252306093-so7rxmnxve.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  },
+                  {
+                    "id": "01a10ef5-19f0-7bcd-a045-049eb4e44bef",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_signature/1791252306100-jsg23przcz.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  },
+                  {
+                    "id": "01a10ef5-1c0e-7001-84b6-2d4651412218",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_signature/1791252306098-vpyam5br0w.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  }
+                ],
                 "videos": [ ],
                 "mediaType": "image",
-                "description": ""
+                "description": "양양 르메르후 펜션만의 편안한 공간"
               }
             }
           ]
