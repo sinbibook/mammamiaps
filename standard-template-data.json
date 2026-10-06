@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.4.0",
-    "generatedAt": "2026-10-06T02:14:36.208869475Z",
+    "version": "1.5.0",
+    "generatedAt": "2026-10-06T02:20:06.316770949Z",
     "templateType": "full_banner_accordion",
     "propertyId": "7b4661f5-daf2-4ef7-9a24-5eb20c2f5246",
     "homepageId": "01a10ee1-6732-748b-9d9a-a8e6291299ed"
@@ -22,7 +22,7 @@
     "checkin": "14:00",
     "checkout": "11:00",
     "checkInOutInfo": "[입퇴실안내]\n- 입실: 14시 00분\n- 퇴실: 11시 00분\n- 입실 마감시간: 22시 00분\n※ 오후 22시 이후 입실하는 경우 숙소에 사전 문의가 필요합니다.",
-    "usageGuide": "[공지사항]\n※ 객실 내 직화, 생선, 고기 조리 불가\n※ 개인 취사도구 및 그릴 반입 불가\n\n[입퇴실안내]\n- 입실: 14시 00분\n- 퇴실: 11시 00분\n- 입실 마감시간: 22시 00분\n※ 오후 22시 이후 입실하는 경우 숙소에 사전 문의가 필요합니다.\n\n[인원추가정보]\n[연령기준]\n- 성인: 8세 이상\n- 아동: 60개월 이상~8세 미만\n- 유아: 60개월 미만\n\n[추가요금]\n- 결제방법: 후결제(현장결제)\n※ 예약 인원보다 실제 이용 인원이 늘어나면 숙소에 미리 연락해 주세요.\n\n[개별바베큐]\n- 이용 객실: 전객실\n- 이용 장소: 객실별 개별 바비큐 데크\n- 바베큐 형태: 숯불\n- 제공 구성: 숯, 석쇠\n- 이용 요금: 4인 미만 그릴(소) 20,000원, 그릴(중) 30,000원 / 4인 이상 그릴(대) 30,000원, 단체 대형그릴 60,000원 (1박기준/현장결제)\n- 이용 시간: ~22:00\n※ 바비큐는 지정된 개별 바비큐 데크를 이용해 주세요.\n\n[공용수영장]\n- 이용 객실: 전객실\n- 운영 계절: 하절기\n- 운영 기간: 2026년 운영 종료\n- 온도: 냉수\n- 이용 요금: 무료\n\n[애견동반]\n- 이용 객실: 전객실\n- 이용 요금: 1마리 30,000원 (1박기준/현장결제)\n- 제한 무게: 소형견\n- 제한 마릿수: 1마리",
+    "usageGuide": "※ 객실 내 직화, 생선, 고기 조리 불가\n※ 개인 취사도구 및 그릴 반입 불가\n\n[입퇴실안내]\n- 입실: 14시 00분\n- 퇴실: 11시 00분\n- 입실 마감시간: 22시 00분\n※ 오후 22시 이후 입실하는 경우 숙소에 사전 문의가 필요합니다.\n\n[인원추가정보]\n[연령기준]\n- 성인: 8세 이상\n- 아동: 60개월 이상~8세 미만\n- 유아: 60개월 미만\n\n[추가 요금]\n- 전객실\n- 요금: 성인 1인 20,000원, 아동 1인 10,000원, 유아 무료\n(1박기준/현장결제)\n※ 예약 인원보다 실제 이용 인원이 늘어나면 숙소에 미리 연락해 주세요.\n\n[개별바베큐]\n- 이용 객실: 전객실\n- 이용 장소: 객실별 개별 바비큐 데크\n- 바베큐 형태: 숯불\n- 제공 구성: 숯, 석쇠\n- 이용 요금: 4인 미만 그릴(소) 20,000원, 그릴(중) 30,000원 / 4인 이상 그릴(대) 30,000원, 단체 대형그릴 60,000원 (1박기준/현장결제)\n- 이용 시간: ~22:00\n※ 바비큐는 지정된 개별 바비큐 데크를 이용해 주세요.\n\n[공용수영장]\n- 이용 객실: 전객실\n- 운영 계절: 하절기\n- 운영 기간: 2026년 운영 종료\n- 온도: 냉수\n- 이용 요금: 무료\n\n[애견동반]\n- 이용 객실: 전객실\n- 이용 요금: 1마리 30,000원 (1박기준/현장결제)\n- 제한 무게: 소형견\n- 제한 마릿수: 1마리",
     "reservationGuide": "※ 객실 내 직화, 생선, 고기 조리 불가\n※ 개인 취사도구 및 그릴 반입 불가",
     "province": "도/시",
     "city": "시/군/구",
@@ -71,6 +71,39 @@
       "securityDeposit": 0
     },
     "facilities": [
+      {
+        "id": "01a10d03-10db-740f-8160-4208e2fbd358",
+        "name": "애견동반",
+        "description": "",
+        "usageGuide": "- 이용 객실: 전객실\n- 이용 요금: 1마리 30,000원 (1박기준/현장결제)\n- 제한 무게: 소형견\n- 제한 마릿수: 1마리",
+        "displayOrder": 0,
+        "images": [
+          {
+            "id": "01a10efe-ea94-7d83-81ba-9e8bcac14655",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a10d03-10db-740f-8160-4208e2fbd358/main/1791252949236-bzbdw3nlhv.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "01a10efe-ea69-7a52-a1d5-c0a7c9ce0b51",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a10d03-10db-740f-8160-4208e2fbd358/main/1791252949237-mc1tjpybjm.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          },
+          {
+            "id": "01a10efe-ea9c-7763-8127-93ac24996cb1",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/01a10d03-10db-740f-8160-4208e2fbd358/main/1791252949239-xh3zpc9gsy.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          }
+        ]
+      },
       {
         "id": "01a10d03-10da-7f63-999b-8a6e8ceb9ac4",
         "name": "공용수영장",
@@ -1567,7 +1600,7 @@
                     "id": "01a10ef3-5b0d-74f4-900d-12068820572a",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_gallery/1791252191613-jxgtonh0dy.jpg",
                     "sortOrder": 0,
-                    "description": "",
+                    "description": "머무르는 휴식",
                     "isSelected": true,
                     "blockId": null
                   },
@@ -1575,15 +1608,15 @@
                     "id": "01a10efd-c37f-7567-9361-c2da01168389",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_gallery/1791252873733-21ixkewyyj.jpg",
                     "sortOrder": 1,
-                    "description": "",
+                    "description": "따뜻한 한끼",
                     "isSelected": true,
                     "blockId": null
                   },
                   {
-                    "id": "01a10efd-c434-7916-9989-cffd2706741e",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_gallery/1791252873737-ive5z2xx4r.jpg",
+                    "id": "01a10f02-cc73-7e71-8000-f91f4ec765d1",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_gallery/1791253203133-nstrlvmmc3.jpg",
                     "sortOrder": 2,
-                    "description": "",
+                    "description": "함께하는 추억",
                     "isSelected": true,
                     "blockId": null
                   },
