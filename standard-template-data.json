@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.11.0",
-    "generatedAt": "2026-10-06T02:25:50.191994813Z",
+    "version": "1.12.0",
+    "generatedAt": "2026-10-06T02:26:20.869947471Z",
     "templateType": "full_banner_accordion",
     "propertyId": "7b4661f5-daf2-4ef7-9a24-5eb20c2f5246",
     "homepageId": "01a10ee1-6732-748b-9d9a-a8e6291299ed"
@@ -1571,11 +1571,20 @@
                 "description": " "
               },
               "closing": {
-                "title": "",
-                "images": [ ],
+                "title": " ",
+                "images": [
+                  {
+                    "id": "01a10f08-817f-733b-99d3-b5539baaadee",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/01a10ee1-6732-748b-9d9a-a8e6291299ed/index_closing/1791253577519-84qibc4n73.jpg",
+                    "sortOrder": 0,
+                    "description": " ",
+                    "isSelected": true,
+                    "blockId": null
+                  }
+                ],
                 "videos": [ ],
                 "mediaType": "image",
-                "description": ""
+                "description": " "
               },
               "essence": {
                 "title": "A Gentle Pause",
