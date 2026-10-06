@@ -11,50 +11,15 @@ class LayoutMapMapper extends BaseDataMapper {
         return this.safeGet(this.data, 'homepage.customFields.pages.layoutMap.sections.0');
     }
 
-    mapHeroSlider() {
+    /**
+     * Hero 섹션 매핑 (단일 이미지)
+     * homepage.customFields.pages.layoutMap.sections[0].hero.images → [data-hero-image]
+     */
+    mapHeroSection() {
         if (!this.isDataLoaded) return;
 
         const section = this.getLayoutMapData();
-        if (!section || !section.hero) return;
-
-        const sliderContainer = document.querySelector('[data-hero-slider]');
-        if (!sliderContainer) return;
-
-        sliderContainer.innerHTML = '';
-
-        const images = section.hero.images || [];
-        const selectedImages = images.filter(img => img.isSelected).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
-
-        if (selectedImages.length === 0) {
-            const slide = document.createElement('div');
-            slide.className = 'hero-slide active';
-            const img = document.createElement('img');
-            if (typeof ImageHelpers !== 'undefined') {
-                ImageHelpers.applyPlaceholder(img);
-            }
-            slide.appendChild(img);
-            sliderContainer.appendChild(slide);
-            return;
-        }
-
-        selectedImages.forEach((imgData, index) => {
-            const slide = document.createElement('div');
-            slide.className = 'hero-slide';
-            if (index === 0) slide.classList.add('active');
-
-            const img = document.createElement('img');
-            img.src = imgData.url || '';
-            img.alt = this.sanitizeText(imgData.description, `배치도 이미지 ${index + 1}`);
-            img.loading = index === 0 ? 'eager' : 'lazy';
-
-            slide.appendChild(img);
-            sliderContainer.appendChild(slide);
-        });
-
-        const totalSlides = document.querySelector('[data-total-slides]');
-        if (totalSlides) {
-            totalSlides.textContent = String(selectedImages.length).padStart(2, '0');
-        }
+        this.mapHeroImage(section?.hero?.images, '배치도 이미지');
     }
 
     mapLayoutMapContent() {
@@ -63,14 +28,19 @@ class LayoutMapMapper extends BaseDataMapper {
         const section = this.getLayoutMapData();
         if (!section || !section.about) return;
 
+        // 타이틀/설명 내용 없으면 미노출
         const titleEl = document.querySelector('[data-layout-map-about-title]');
         if (titleEl) {
-            titleEl.textContent = this.sanitizeText(section.about.title, '배치도 타이틀');
+            const title = this.sanitizeText(section.about.title);
+            titleEl.textContent = title;
+            titleEl.style.display = title ? '' : 'none';
         }
 
         const descEl = document.querySelector('[data-layout-map-about-description]');
         if (descEl) {
-            descEl.textContent = this.sanitizeText(section.about.description, '배치도 설명');
+            const description = this.sanitizeText(section.about.description);
+            descEl.textContent = description;
+            descEl.style.display = description ? '' : 'none';
         }
 
         const introSection = document.querySelector('.intro-section');
@@ -117,19 +87,22 @@ class LayoutMapMapper extends BaseDataMapper {
 
             imageWrapperDiv.appendChild(img);
 
-            // Description wrapper
-            const descWrapperDiv = document.createElement('div');
-            descWrapperDiv.className = 'layout-map-description-wrapper';
+            itemDiv.appendChild(imageWrapperDiv);
 
-            if (image.description) {
+            // Description wrapper - 설명 없으면 배경 박스까지 미노출
+            const imageDescription = this.sanitizeText(image.description);
+            if (imageDescription) {
+                const descWrapperDiv = document.createElement('div');
+                descWrapperDiv.className = 'layout-map-description-wrapper';
+
                 const descDiv = document.createElement('div');
                 descDiv.className = 'layout-map-description';
-                descDiv.innerHTML = this._formatTextWithLineBreaks(this.sanitizeText(image.description, ''));
+                descDiv.innerHTML = this._formatTextWithLineBreaks(imageDescription);
                 descWrapperDiv.appendChild(descDiv);
+
+                itemDiv.appendChild(descWrapperDiv);
             }
 
-            itemDiv.appendChild(imageWrapperDiv);
-            itemDiv.appendChild(descWrapperDiv);
             introSection.appendChild(itemDiv);
         });
 
@@ -190,7 +163,7 @@ class LayoutMapMapper extends BaseDataMapper {
             return;
         }
 
-        this.mapHeroSlider();
+        this.mapHeroSection();
         this.mapLayoutMapContent();
         this.mapClosingSection();
         this.mapPropertyInfo();

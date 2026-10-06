@@ -203,7 +203,11 @@ class RoomMapper extends BaseDataMapper {
         if (roomDescription) {
             const roomPageData = this.getCurrentRoomPageData();
             const heroTitle = roomPageData?.data?.sections?.[0]?.hero?.title;
-            roomDescription.innerHTML = this._formatTextWithLineBreaks(heroTitle, '객실 설명');
+            const hasDescription = !this._isEmptyValue(heroTitle) && heroTitle.trim() !== '';
+
+            // 객실설명 없으면 미노출
+            roomDescription.style.display = hasDescription ? '' : 'none';
+            roomDescription.innerHTML = hasDescription ? this._formatTextWithLineBreaks(heroTitle) : '';
         }
     }
 
